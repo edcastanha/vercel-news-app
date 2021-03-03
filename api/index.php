@@ -1,7 +1,13 @@
 <?php
 
-header('content-type: application/json');
-echo json_encode(['time' => time(), 'date' => date('d.m.Y'), 'tech' => 'Vercel']);
+/*# Verificação de controle de rota
+/## Caso a view não seja encontrada retorna para index
+/
+/
+*/
+if(isset($_GET['view'])){
+    if(files_exits('core/controles/'.strtolower($_GET['view'])));
 
-
-echo '<h1>TESTE</h1>';
+}else{
+    include('core/controles/indexControler.php');
+} 
