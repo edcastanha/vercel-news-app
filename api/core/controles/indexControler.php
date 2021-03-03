@@ -1,2 +1,2 @@
 <?php
-echo 'Controler Index';
+echo '<h1>Controler Index</h1>';
