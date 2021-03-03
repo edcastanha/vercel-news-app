@@ -9,5 +9,5 @@ if(isset($_GET['view'])){
     if(file_exists('api/core/controles/'.strtolower($_GET['view'])));
 
 }else{
-    include('api/indexControler.phpindexControler.php');
+    include('core/controles/indexControler.php');
 } 
